@@ -11,7 +11,7 @@ Pillow==3.1.2
 ptyprocess==0.5
 pycups==1.9.73
 pycurl==7.43.0
-Pygments==2.1
+Pygments==2.7.4
 pyxdg==0.25
 PyYAML==3.11
 requests==2.9.1
