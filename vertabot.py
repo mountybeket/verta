@@ -6,7 +6,7 @@ from firebase_admin import credentials
 from firebase_admin import db
 
 bot = telebot.TeleBot(config.token) #должно быть в начале. Вызывает токен
-cred = credentials.Certificate('C:/Users/Kokoto/Desktop/verta/bot/key.json')
+cred = credentials.Certificate("/home/kokoto/uba/key.json")
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://vertabot.firebaseio.com/' })
 
@@ -59,7 +59,7 @@ def start_dialog(message):
         
         bot.send_message(message.from_user.id,"Отлично! В скором времени мы с тобой свяжемся :) Если хочешь можешь вернуться на наш сайт.")
         inline = types.InlineKeyboardMarkup()
-        url_button = types.InlineKeyboardButton(text = "Verta", url = "http://bitpine.ru/verta/")
+        url_button = types.InlineKeyboardButton(text = "reVerta", url = "https://www.reverta.online/")
         inline.add(url_button)
         bot.send_message(message.from_user.id,"Ссылка на сайт", reply_markup = inline)
         
